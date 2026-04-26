@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Escolha Saudável | Seu Combustível Diário</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header / Navegação --> 
+        <header class="main-header">
+            <div class="logo">
+                <span class="logo-icon">🥗</span>
+                <span class="logo-text">Escolha Saudável</span>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-btn active" data-section="home">Início</button>
+                <button class="nav-btn" data-section="choices">Escolhas</button>
+                <button class="nav-btn" data-section="profile">Meu Perfil</button>
+                <button class="nav-btn" data-section="recipes">Receitas</button>
+                <button class="nav-btn" data-section="learn">Aprender</button>
+                <button class="nav-btn" data-section="about">Sobre</button>
+            </nav>
+            <div class="mobile-menu-btn">☰</div>
+        </header>
+
+        <main class="main-content">
+            <!-- Seção Home -->
+            <section id="home-section" class="section active">
+                <div class="hero">
+                    <div class="hero-text">
+                        <h1>Você sabe escolher <span class="highlight">o que alimenta seu corpo</span>?</h1>
+                        <p>Descubra como pequenas escolhas transformam sua energia, humor e saúde. Vamos explorar juntos?</p>
+                        <button class="btn-primary btn-start">Começar agora →</button>
+                    </div>
+                    <div class="hero-illustration">
+                        <div class="food-grid">
+                            <span class="food-emoji">🍎</span>
+                            <span class="food-emoji">🥑</span>
+                            <span class="food-emoji">🍔</span>
+                            <span class="food-emoji">🥤</span>
+                            <span class="food-emoji">🥦</span>
+                            <span class="food-emoji">🍕</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">✅</div>
+                        <h3>Aprenda escolhendo</h3>
+                        <p>Clique no que você escolheria e entenda os benefícios ou cuidados de cada alimento.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Descubra seu nível</h3>
+                        <p>Veja seu perfil alimentar e evolua com desafios diários.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🍳</div>
+                        <h3>Receitas práticas</h3>
+                        <p>Baseado nas suas escolhas, sugerimos receitas gostosas e saudáveis.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Faça suas escolhas -->
+            <section id="choices-section" class="section">
+                <h2>🍽️ Faça suas escolhas</h2>
+                <p class="section-subtitle">O que você levaria no seu prato? Clique e descubra!</p>
+                
+                <div class="food-card-container">
+                    <div class="food-card" id="food-card">
+                        <div class="food-image" id="food-image">🍎</div>
+                        <h3 id="food-name">Maçã</h3>
+                        <p id="food-description">Crocante, doce e natural.</p>
+                        <div class="choice-buttons">
+                            <button class="choice-btn good" id="good-choice">✅ Boa escolha</button>
+                            <button class="choice-btn moderate" id="moderate-choice">⚠️ Consumir com moderação</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feedback-card" id="feedback-card" style="display: none;">
+                    <h4 id="feedback-title"></h4>
+                    <p id="feedback-text"></p>
+                    <button class="btn-next" id="next-food">Próximo alimento →</button>
+                </div>
+                
+                <div class="choices-progress">
+                    <span id="choices-count">0</span> / <span id="total-choices">8</span> alimentos analisados
+                </div>
+            </section>
+
+            <!-- Seção Perfil alimentar -->
+            <section id="profile-section" class="section">
+                <h2>📊 Meu perfil alimentar</h2>
+                <div class="profile-card">
+                    <div class="level-badge" id="level-badge">
+                        <span class="level-icon">🌿</span>
+                        <span id="level-name">Explorador Nutricional</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <p class="score-text">Pontuação: <strong id="user-score">0</strong> pontos</p>
+                    <p id="level-message">Continue fazendo escolhas para evoluir!</p>
+                    <div class="achievements">
+                        <p>⭐ Desafio do dia: Coma uma fruta colorida hoje!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Receitas -->
+            <section id="recipes-section" class="section">
+                <h2>🍳 Receitas sugeridas para você</h2>
+                <p class="section-subtitle">Baseado nas suas preferências saudáveis</p>
+                <div class="recipes-grid" id="recipes-grid">
+                    <!-- Receitas serão inseridas via JS -->
+                </div>
+                <div class="motivational-message">
+                    <p>✨ "Pequenas escolhas, grandes mudanças" ✨</p>
+                </div>
+            </section>
+
+            <!-- Seção Aprender -->
+            <section id="learn-section" class="section">
+                <h2>📚 Por dentro da nutrição</h2>
+                <div class="learn-grid">
+                    <div class="learn-card">
+                        <h3>🍬 Por que evitar muito açúcar?</h3>
+                        <p>O excesso de açúcar pode causar picos de energia seguidos de cansaço, além de prejudicar a saúde dos dentes e aumentar o risco de doenças como diabetes. Que tal trocar o refrigerante por água com gás e limão?</p>
+                    </div>
+                    <div class="learn-card">
+                        <h3>⚠️ O que são alimentos ultraprocessados?</h3>
+                        <p>São produtos industrializados com poucos ingredientes naturais e muitos aditivos químicos. Exemplos: salgadinhos, nuggets, refrigerantes. Prefira alimentos in natura ou minimamente processados!</p>
+                    </div>
+                    <div class="learn-card">
+                        <h3>🥗 Como montar um prato saudável?</h3>
+                        <p>Metade do prato com vegetais e frutas, um quarto com proteínas (feijão, frango, ovos) e um quarto com carboidratos integrais (arroz integral, batata, macaxeira). Cor e variedade são essenciais!</p>
+                    </div>
+                    <div class="learn-card">
+                        <h3>💧 A importância da água</h3>
+                        <p>Nosso corpo é 60% água! Manter-se hidratado ajuda na concentração, no humor e no funcionamento do intestino. Comece com 1,5 a 2 litros por dia.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Sobre -->
+            <section id="about-section" class="section">
+                <h2>👩‍🏫 Sobre o projeto</h2>
+                <div class="about-content">
+                    <p>Este site é um <strong>projeto de extensão universitária</strong> que integra as áreas de <strong>Nutrição, Gastronomia e Tecnologia</strong> para levar educação alimentar aos adolescentes de forma leve, interativa e acessível.</p>
+                    <p>Ideal para uso em escolas, oficinas e para você que quer aprender brincando. Acreditamos que informação de qualidade pode transformar hábitos e promover saúde de maneira divertida.</p>
+                    <div class="about-highlight">
+                        <span>🎓 Nutrição</span>
+                        <span>🍳 Gastronomia</span>
+                        <span>💻 Tecnologia</span>
+                    </div>
+                    <p><strong>Escolha Saudável | Seu Combustível Diário</strong> — feito especialmente para adolescentes curiosos que querem fazer escolhas melhores sem frescura.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <p>© 2025 Escolha Saudável - Alimente seu corpo com informação</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

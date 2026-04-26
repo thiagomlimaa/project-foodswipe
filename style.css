@@ -1,0 +1,536 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F5F0E6;  /* Creme principal */
+    color: #1e2a1f;
+    line-height: 1.5;
+}
+
+.app-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #F5F0E6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.main-header {
+    background-color: #F5F0E6;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #A5D6A7;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #F5F0E6;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2E7D32;
+}
+
+.logo-icon {
+    font-size: 2rem;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4a5c3e;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-btn:hover {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+}
+
+.nav-btn.active {
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #2E7D32;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    padding-top: 80px; /* Compensar o header fixo */
+}
+
+.section {
+    /* display: none; */ /* Removido para permitir scroll natural */
+    animation: fadeIn 0.3s ease;
+    min-height: 100vh; /* Garante que cada seção ocupe pelo menos a altura da tela */
+    padding: 4rem 2rem; /* Espaçamento interno para melhor visualização */
+    box-sizing: border-box;
+}
+
+/* Mantemos a classe active para outras potencialidades, mas não para display */
+.section.active {
+    /* display: block; */ /* Não mais necessário */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botões padrão */
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-primary:hover {
+    background-color: #2E7D32;
+    transform: scale(1.02);
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    color: #1e3a1e;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #4CAF50;
+    border-bottom: 3px solid #A5D6A7;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #4a5c3e;
+    margin-bottom: 2rem;
+}
+
+.hero-illustration {
+    flex: 1;
+    text-align: center;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.food-emoji {
+    font-size: 3.5rem;
+    background-color: white;
+    padding: 0.8rem;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.food-emoji:hover {
+    transform: scale(1.1);
+}
+
+/* Features */
+.features {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 24px;
+    padding: 1.8rem;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #E8F5E9;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    background-color: #E8F5E9;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.feature-card h3 {
+    color: #2E7D32;
+    margin-bottom: 0.5rem;
+}
+
+/* Seção Choices */
+#choices-section h2, .section h2 {
+    font-size: 2rem;
+    color: #2E7D32;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: #6b7c5e;
+    margin-bottom: 2rem;
+}
+
+.food-card-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.food-card {
+    background: white;
+    border-radius: 48px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.food-image {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.food-card h3 {
+    font-size: 2rem;
+    color: #1e3a1e;
+}
+
+.choice-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.choice-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+
+.choice-btn.good {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.choice-btn.good:hover {
+    background-color: #2E7D32;
+}
+
+.choice-btn.moderate {
+    background-color: #FFB74D;
+    color: #3e2a1f;
+}
+
+.choice-btn.moderate:hover {
+    background-color: #FFA726;
+}
+
+.feedback-card {
+    background-color: #E8F5E9;
+    padding: 1.5rem;
+    border-radius: 32px;
+    margin-top: 1.5rem;
+    text-align: center;
+    border-left: 6px solid #4CAF50;
+}
+
+.feedback-card h4 {
+    font-size: 1.4rem;
+    color: #2E7D32;
+    margin-bottom: 0.5rem;
+}
+
+.btn-next {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 40px;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.choices-progress {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 500;
+    color: #4a5c3e;
+}
+
+/* Perfil */
+.profile-card {
+    background: white;
+    border-radius: 32px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.level-badge {
+    background-color: #E8F5E9;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.6rem 1.8rem;
+    border-radius: 60px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2E7D32;
+    margin-bottom: 1.5rem;
+}
+
+.progress-container {
+    background-color: #E0E0E0;
+    border-radius: 20px;
+    height: 20px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #4CAF50;
+    height: 100%;
+    width: 0%;
+    border-radius: 20px;
+    transition: width 0.3s;
+}
+
+.score-text {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.achievements {
+    background-color: #F1F8E9;
+    padding: 1rem;
+    border-radius: 28px;
+    margin-top: 1rem;
+}
+
+/* Receitas grid */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.8rem;
+    margin: 2rem 0;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-img {
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #F5F0E6;
+}
+
+.recipe-card h4 {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    color: #2E7D32;
+}
+
+.recipe-card p {
+    padding: 0.5rem 1rem;
+    color: #4a5c3e;
+}
+
+.recipe-tag {
+    display: inline-block;
+    background-color: #E8F5E9;
+    border-radius: 20px;
+    padding: 0.2rem 0.8rem;
+    margin: 0.5rem 1rem 1rem;
+    font-size: 0.8rem;
+}
+
+.motivational-message {
+    text-align: center;
+    background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+    padding: 1rem;
+    border-radius: 48px;
+    font-style: italic;
+    font-weight: 500;
+    color: #1e3a1e;
+}
+
+/* Learn grid */
+.learn-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    margin: 1rem 0;
+}
+
+.learn-card {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 28px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border: 1px solid #C8E6C9;
+}
+
+.learn-card h3 {
+    color: #2E7D32;
+    margin-bottom: 0.8rem;
+}
+
+/* About */
+.about-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 32px;
+    line-height: 1.7;
+}
+
+.about-highlight {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1.5rem 0;
+    font-weight: 600;
+    color: #2E7D32;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #2E7D32;
+    color: #F5F0E6;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: white;
+        padding: 1rem;
+        border-radius: 28px;
+        margin-top: 1rem;
+    }
+    
+    .main-nav.show {
+        display: flex;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .choice-buttons {
+        flex-direction: column;
+    }
+    
+    .main-header {
+        padding: 1rem;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+}
+
+/* Animações e detalhes */
+.btn-primary, .choice-btn, .btn-next, .nav-btn {
+    cursor: pointer;
+}
+
+.btn-primary:active, .choice-btn:active {
+    transform: scale(0.97);
+}
