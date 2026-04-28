@@ -104,9 +104,9 @@ body {
 }
 
 /* Mantemos a classe active para outras potencialidades, mas não para display */
-.section.active {
-    /* display: block; */ /* Não mais necessário */
-}
+/* .section.active {
+    display: block; Não mais necessário
+} */
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
