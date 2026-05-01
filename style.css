@@ -101,6 +101,7 @@ body {
     min-height: 100vh; /* Garante que cada seção ocupe pelo menos a altura da tela */
     padding: 4rem 2rem; /* Espaçamento interno para melhor visualização */
     box-sizing: border-box;
+    
 }
 
 /* Mantemos a classe active para outras potencialidades, mas não para display */
@@ -141,6 +142,7 @@ body {
     gap: 2rem;
     margin-bottom: 3rem;
     flex-wrap: wrap;
+    /* background-color: red; */
 }
 
 .hero-text {
@@ -198,6 +200,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 2rem;
+    /* background-color: red; */
 }
 
 .feature-card {
@@ -294,8 +297,8 @@ body {
 }
 
 .choice-btn.moderate {
-    background-color: #FFB74D;
-    color: #3e2a1f;
+    background-color: #f00b0b;
+    color: #ffffff;
 }
 
 .choice-btn.moderate:hover {
@@ -533,4 +536,11 @@ body {
 
 .btn-primary:active, .choice-btn:active {
     transform: scale(0.97);
+}
+
+
+/* Melhorando os espaçamentos entre as sections */
+
+#home-section {
+    padding: 4rem 2rem;
 }
