@@ -100,7 +100,6 @@ body {
     padding: 6rem 2rem; /* Aumentamos para 6rem (aproximadamente 96px) em cima e embaixo */
     box-sizing: border-box;
     scroll-margin-top: 100px; /* Isso impede que o cabeçalho fixo tampe o início da seção ao rolar! */
-    background-color: red;
 }
 
 /* Mantemos a classe active para outras potencialidades, mas não para display */
