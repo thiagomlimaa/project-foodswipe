@@ -262,3 +262,16 @@ function displayHealthyRecipes() {
 
 // Iniciar tudo quando carregar
 document.addEventListener('DOMContentLoaded', init);
+
+
+// Toda vez que o usuário clicar no botão "Próximo Alimento", o JavaScript vai puxar a tela de volta para o topo do card automaticamente, sem ele precisar usar o dedo.
+
+function nextFood() {
+    // 1. FAZ A TELA ROLAR SUAVEMENTE DE VOLTA PARA O CARD
+    document.getElementById('choices-section').scrollIntoView({ behavior: 'smooth' });
+
+    // ... o restante do código que já estava na sua função ...
+    currentFoodIndex++;
+    
+    // ...
+}

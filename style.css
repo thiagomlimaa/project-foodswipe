@@ -20,7 +20,7 @@ body {
     flex-direction: column;
 }
 
-/* Header */
+/* Header NavBar */
 .main-header {
     background-color: #F5F0E6;
     padding: 1rem 2rem;
@@ -96,12 +96,10 @@ body {
 }
 
 .section {
-    /* display: none; */ /* Removido para permitir scroll natural */
     animation: fadeIn 0.3s ease;
-    min-height: 100vh; /* Garante que cada seção ocupe pelo menos a altura da tela */
-    padding: 4rem 2rem; /* Espaçamento interno para melhor visualização */
+    padding: 6rem 2rem; /* Aumentamos para 6rem (aproximadamente 96px) em cima e embaixo */
     box-sizing: border-box;
-    
+    scroll-margin-top: 100px; /* Isso impede que o cabeçalho fixo tampe o início da seção ao rolar! */
 }
 
 /* Mantemos a classe active para outras potencialidades, mas não para display */
@@ -527,6 +525,28 @@ body {
     .main-content {
         padding: 1rem;
     }
+
+    /* AJEITANDO OS TAMANHOS DOS EMOJIS DO MOBILE */
+
+    /* Centraliza a área da ilustração no mobile */
+    .hero-illustration {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Ajusta o grid para não vazar a tela */
+    .food-grid {
+        max-width: 100%; 
+        gap: 0.8rem; /* Diminui o espaço entre os emojis */
+        justify-content: center;
+    }
+
+    /* Reduz um pouco os emojis no celular para caberem perfeitamente */
+    .food-emoji {
+        font-size: 2.5rem; 
+        padding: 0.5rem;
+    }
 }
 
 /* Animações e detalhes */
@@ -542,5 +562,25 @@ body {
 /* Melhorando os espaçamentos entre as sections */
 
 #home-section {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem 4rem 2rem; 
+}
+
+
+/* AJEITANDO O EFIETO ioiô DO JOGO DE SUBIR E DESCER PRA VÊ O FEEDBACK */
+@media (max-width: 768) {
+
+    /* Ajustes do card de escolhas para caber na tela do celular */
+.food-card {
+    padding: 1.5rem 1rem; /* Diminui o espaço interno do card branco */
+}
+
+.food-emoji-large {
+    font-size: 5rem; /* Diminui o emoji gigante para sobrar espaço para os botões */
+    margin: 0.5rem 0; 
+}
+
+#feedback-area {
+    margin-top: 1rem;
+}
+
 }
