@@ -19,10 +19,11 @@ let pointsToNextLevel = 100;
 
 // Receitas baseadas em preferência saudável
 const healthyRecipes = [
-    { name: "Vitamina de abacate com hortelã", time: "5 min", ingredients: "Abacate, leite vegetal, hortelã, mel", emoji: "🥤" },
-    { name: "Salada de frutas colorida", time: "10 min", ingredients: "Morango, kiwi, manga, laranja", emoji: "🍓" },
-    { name: "Brócolis gratinado com castanhas", time: "25 min", ingredients: "Brócolis, castanha, queijo, azeite", emoji: "🧀" },
-    { name: "Espetinho de frutas com iogurte", time: "8 min", ingredients: "Abacaxi, uva, morango, iogurte natural", emoji: "🍡" }
+    { name: "Vitamina de abacate com hortelã", time: "5 min", ingredients: "Abacate, leite vegetal, hortelã, mel", emoji: "🥤", link: "receitas/vitamina-abacate.html"
+     },
+    { name: "Salada de frutas colorida", time: "10 min", ingredients: "Morango, kiwi, manga, laranja", emoji: "🍓", link: "receitas/salada-frutas.html"},
+    { name: "Brócolis gratinado com castanhas", time: "25 min", ingredients: "Brócolis, castanha, queijo, azeite", emoji: "🧀", link: "receitas/brocolis.html"},
+    { name: "Espetinho de frutas com iogurte", time: "8 min", ingredients: "Abacaxi, uva, morango, iogurte natural", emoji: "🍡", link: "receitas/espetinhos.html" }
 ];
 
 // Elementos DOM
@@ -243,6 +244,7 @@ function updateProfileUI() {
     else levelMessage.textContent = "Continue fazendo escolhas para evoluir! Cada clique conta!";
 }
 
+// BTN DE VER RECEITA
 function displayHealthyRecipes() {
     if (!recipesGrid) return;
     recipesGrid.innerHTML = "";
@@ -252,9 +254,7 @@ function displayHealthyRecipes() {
         card.innerHTML = `
             <div class="recipe-img">${recipe.emoji}</div>
             <h4>${recipe.name}</h4>
-            <p>⏱️ ${recipe.time}</p>
-            <p>🥄 ${recipe.ingredients}</p>
-            <span class="recipe-tag">🍽️ Saudável</span>
+            <a href="${recipe.link}" target="_blank" class="btn-recipe" style="text-decoration: none; text-align: center;">Ver Receita</a> 
         `;
         recipesGrid.appendChild(card);
     });
@@ -266,12 +266,12 @@ document.addEventListener('DOMContentLoaded', init);
 
 // Toda vez que o usuário clicar no botão "Próximo Alimento", o JavaScript vai puxar a tela de volta para o topo do card automaticamente, sem ele precisar usar o dedo.
 
-function nextFood() {
-    // 1. FAZ A TELA ROLAR SUAVEMENTE DE VOLTA PARA O CARD
-    document.getElementById('choices-section').scrollIntoView({ behavior: 'smooth' });
+// function nextFood() {
+//     // 1. FAZ A TELA ROLAR SUAVEMENTE DE VOLTA PARA O CARD
+//     document.getElementById('choices-section').scrollIntoView({ behavior: 'smooth' });
 
-    // ... o restante do código que já estava na sua função ...
-    currentFoodIndex++;
+//     // ... o restante do código que já estava na sua função ...
+//     currentFoodIndex++;
     
-    // ...
-}
+//     // ...
+// }

@@ -99,7 +99,7 @@ body {
     animation: fadeIn 0.3s ease;
     padding: 6rem 2rem; /* Aumentamos para 6rem (aproximadamente 96px) em cima e embaixo */
     box-sizing: border-box;
-    scroll-margin-top: 100px; /* Isso impede que o cabeçalho fixo tampe o início da seção ao rolar! */   
+    /* scroll-margin-top: 100px; Isso impede que o cabeçalho fixo tampe o início da seção ao rolar!    */
 }
 
 /* Mantemos a classe active para outras potencialidades, mas não para display */
@@ -393,43 +393,50 @@ body {
     margin: 2rem 0;
 }
 
+/* card das receitas */
 .recipe-card {
     background: white;
     border-radius: 28px;
     overflow: hidden;
     box-shadow: 0 6px 14px rgba(0,0,0,0.05);
     transition: transform 0.2s;
+    /* Novas regras abaixo para alinhar tudo perfeitamente: */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Faz todos os cards da linha terem a mesma altura */
 }
 
-.recipe-card:hover {
+/* .recipe-card:hover {
     transform: translateY(-5px);
-}
+} */
 
 .recipe-img {
-    font-size: 3.5rem;
+    font-size: 5rem;
     text-align: center;
-    padding: 1rem;
+    padding: 3rem;
     background-color: #F5F0E6;
 }
 
 .recipe-card h4 {
-    font-size: 1.3rem;
-    padding: 0 1rem;
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem 0.2rem 1rem; /* Ajustamos para dar menos espaço embaixo do título */
     color: #2E7D32;
+    margin-bottom: 1.5rem
 }
 
 .recipe-card p {
-    padding: 0.5rem 1rem;
-    color: #4a5c3e;
+    padding: 0.2rem 1rem; /* Diminuímos o espaçamento vertical entre as linhas de 0.5rem para 0.2rem */
+    color: #ee0808;
+    font-size: 0.9rem; /* Deixamos a fonte das informações um pouco menor */
 }
 
 .recipe-tag {
     display: inline-block;
     background-color: #E8F5E9;
     border-radius: 20px;
-    padding: 0.2rem 0.8rem;
-    margin: 0.5rem 1rem 1rem;
-    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    margin: 0.5rem 1rem 0.8rem;
+    font-size: 0.75rem;
 }
 
 .motivational-message {
@@ -566,21 +573,31 @@ body {
 }
 
 
-/* AJEITANDO O EFIETO ioiô DO JOGO DE SUBIR E DESCER PRA VÊ O FEEDBACK */
-@media (max-width: 768) {
+/* ESTILIZAÇÃO DO BTN DEE VER RECEITA */
 
-    /* Ajustes do card de escolhas para caber na tela do celular */
-.food-card {
-    padding: 1.5rem 1rem; /* Diminui o espaço interno do card branco */
+/* Estilo do botão de Ver Receita */
+.btn-recipe {
+    background-color: #E8F5E9; /* Fundo verde clarinho */
+    color: #2E7D32;            /* Texto verde escuro */
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin: 1rem auto 1.5rem auto; /* Centraliza e dá espaço em cima e embaixo */
+    display: block;            /* Necessário para o margin auto funcionar */
+    font-family: 'Inter', sans-serif;
+
+    /* Novas regras para o tamanho e posição: */
+    display: inline-block;
+    width: max-content; /* Impede que o botão estique para os lados */
+    margin: auto auto 1.5rem auto; /* O primeiro 'auto' empurra o botão lá pro fundo do card! */
 }
 
-.food-emoji-large {
-    font-size: 5rem; /* Diminui o emoji gigante para sobrar espaço para os botões */
-    margin: 0.5rem 0; 
-}
-
-#feedback-area {
-    margin-top: 1rem;
-}
-
+.btn-recipe:hover {
+    background-color: #4CAF50; /* Fica verde forte quando passa o mouse */
+    color: white;              /* Texto fica branco */
+    transform: scale(1.05);    /* Dá uma leve crescidinha */
 }
