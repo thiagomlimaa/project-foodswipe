@@ -19,10 +19,12 @@ let pointsToNextLevel = 100;
 
 // Receitas baseadas em preferência saudável
 const healthyRecipes = [
-    { name: "Vitamina de abacate com hortelã", time: "5 min", ingredients: "Abacate, leite vegetal, hortelã, mel", emoji: "🥤", link: "receitas/vitamina-abacate.html"
-     },
-    { name: "Salada de frutas colorida", time: "10 min", ingredients: "Morango, kiwi, manga, laranja", emoji: "🍓", link: "receitas/salada-frutas.html"},
-    { name: "Brócolis gratinado com castanhas", time: "25 min", ingredients: "Brócolis, castanha, queijo, azeite", emoji: "🧀", link: "receitas/brocolis.html"},
+    { name: "Vitamina de abacate com hortelã", time: "5 min", ingredients: "Abacate, leite vegetal, hortelã, mel", emoji: "🥤", link: "vitamina/vitamina.html"},
+
+    { name: "Salada de frutas colorida", time: "10 min", ingredients: "Morango, kiwi, manga, laranja", emoji: "🍓", link: "salada/salada.html"},
+
+    { name: "Brócolis gratinado com castanhas", time: "25 min", ingredients: "Brócolis, castanha, queijo, azeite", emoji: "🥦", link: "brocolis/brocolis.html"},
+
     { name: "Espetinho de frutas com iogurte", time: "8 min", ingredients: "Abacaxi, uva, morango, iogurte natural", emoji: "🍡", link: "receitas/espetinhos.html" }
 ];
 
