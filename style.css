@@ -300,7 +300,7 @@ body {
 }
 
 .choice-btn.moderate:hover {
-    background-color: #FFA726;
+    background-color: #ae1313;
 }
 
 .feedback-card {
@@ -398,7 +398,9 @@ body {
     background: white;
     border-radius: 28px;
     overflow: hidden;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+    /* box-shadow: 0 6px 14px rgba(0,0,0,0.05); */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.185);  /* mais visível */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);  /* mais espalhada */
     transition: transform 0.2s;
     /* Novas regras abaixo para alinhar tudo perfeitamente: */
     display: flex;
