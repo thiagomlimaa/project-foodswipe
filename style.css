@@ -127,6 +127,29 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+/* NOVO LOYOUT DO CARD DE ESCOLHAS */
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to   { transform: translateY(0); }
+}
+
+.feedback-card h4 {
+    font-size: 1.3rem;
+    color: #2E7D32;
+    margin-bottom: 0.5rem;
+}
+
+/* Fundo escuro atrás do modal */
+.feedback-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 998;
+    animation: fadeIn 0.2s ease;
+}
+/* ACABA AQUI */
+
 .btn-primary:hover {
     background-color: #2E7D32;
     transform: scale(1.02);
@@ -304,12 +327,24 @@ body {
 }
 
 .feedback-card {
-    background-color: #E8F5E9;
+    /* background-color: #E8F5E9;
     padding: 1.5rem;
     border-radius: 32px;
     margin-top: 1.5rem;
     text-align: center;
-    border-left: 6px solid #4CAF50;
+    border-left: 6px solid #4CAF50; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 32px 32px 0 0;
+    text-align: center;
+    border-top: 6px solid #4CAF50;
+    box-shadow: 0 -8px 30px rgba(0,0,0,0.15);
+    z-index: 999;
+    animation: slideUp 0.3s ease;
 }
 
 .feedback-card h4 {

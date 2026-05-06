@@ -91,7 +91,11 @@ function init() {
     
     if (goodChoiceBtn) goodChoiceBtn.addEventListener('click', () => handleChoice(true));
     if (moderateChoiceBtn) moderateChoiceBtn.addEventListener('click', () => handleChoice(false));
-    if (nextBtn) nextBtn.addEventListener('click', nextFood);
+    // if (nextBtn) nextBtn.addEventListener('click', nextFood);
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+    fecharFeedback();
+    nextFood();
+    });
     
     // Mobile menu
     const mobileBtn = document.querySelector('.mobile-menu-btn');
@@ -175,6 +179,46 @@ function showFood(index) {
     feedbackCard.style.display = "none";
 }
 
+// EX CONFIG DO CARD DE ESCOLHAS 
+
+// function handleChoice(isGoodChoice) {
+//     const food = foods[currentFoodIndex];
+//     const expectedGood = food.isGood;
+//     let pointsEarned = 0;
+//     let isCorrect = (isGoodChoice === expectedGood);
+    
+//     if (isCorrect) {
+//         pointsEarned = 20;
+//         userScore += pointsEarned;
+//         choicesMade++;
+//         if (isGoodChoice) {
+//             feedbackTitle.textContent = "✅ Boa Escolha!";
+//             feedbackText.textContent = food.goodFeedback || "Você acertou! Esse alimento traz benefícios para o corpo e mente.";
+//         } else {
+//             feedbackTitle.textContent = "⚠️ Consumir com moderação!";
+//             feedbackText.textContent = food.moderateFeedback || "Esse alimento merece atenção. Consuma com equilíbrio e prefira opções mais naturais.";
+//         }
+//     } else {
+//         // Escolha incorreta - mas ensina
+//         pointsEarned = 5;
+//         userScore += pointsEarned;
+//         choicesMade++;
+//         if (isGoodChoice && !expectedGood) {
+//             feedbackTitle.textContent = "⚠️ Atenção!";
+//             feedbackText.textContent = `Este alimento não é tão saudável assim. ${food.moderateFeedback || "Tente consumir com moderação e busque alternativas mais nutritivas."}`;
+//         } else {
+//             feedbackTitle.textContent = "✅ Quase lá!";
+//             feedbackText.textContent = `Na verdade, ${food.name} é uma ótima escolha! ${food.goodFeedback || "Que tal incluí-lo mais vezes na sua rotina?"}`;
+//         }
+//     }
+    
+//     updateProfileUI();
+//     choicesCountSpan.textContent = choicesMade;
+//     feedbackCard.style.display = "block";
+
+
+// NOVA CONFI DO CARD DE ESCOLHAS
+
 function handleChoice(isGoodChoice) {
     const food = foods[currentFoodIndex];
     const expectedGood = food.isGood;
@@ -193,7 +237,6 @@ function handleChoice(isGoodChoice) {
             feedbackText.textContent = food.moderateFeedback || "Esse alimento merece atenção. Consuma com equilíbrio e prefira opções mais naturais.";
         }
     } else {
-        // Escolha incorreta - mas ensina
         pointsEarned = 5;
         userScore += pointsEarned;
         choicesMade++;
@@ -209,9 +252,12 @@ function handleChoice(isGoodChoice) {
     updateProfileUI();
     choicesCountSpan.textContent = choicesMade;
     feedbackCard.style.display = "block";
+}
+
+// APAGUE TUDO ISSO ↑
     
     // Avança automaticamente após um tempo? Não, usuário clica em próximo
-}
+// }
 
 function nextFood() {
     if (currentFoodIndex < totalFoods - 1) {
