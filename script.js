@@ -93,7 +93,7 @@ function init() {
     if (moderateChoiceBtn) moderateChoiceBtn.addEventListener('click', () => handleChoice(false));
     // if (nextBtn) nextBtn.addEventListener('click', nextFood);
     if (nextBtn) nextBtn.addEventListener('click', () => {
-    fecharFeedback();
+    feedbackCard.style.display = 'none';
     nextFood();
     });
     
