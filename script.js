@@ -9,6 +9,7 @@ const foods = [
     { name: "Vitamina de Banana", emoji: "🥤", description: "Cremosa, doce e energética.", goodFeedback: "✅ Bebida nutritiva! Combina carboidratos bons, fibras e proteínas. Ideal para café da manhã.", moderateFeedback: "⚠️ Substitua o açúcar por mel ou banana bem madura para adoçar naturalmente.", isGood: true },
 
     { name: "Refrigerante", emoji: "🥤", description: "Gaseificado, doce e gelado.", goodFeedback: "", moderateFeedback: "⚠️ Muito açúcar e aditivos químicos. Prefira água ou sucos naturais.", isGood: false },
+
     { name: "Batata Frita", emoji: "🍟", description: "Crocante e salgada.", goodFeedback: "", moderateFeedback: "⚠️ Rica em gordura e sódio. Que tal batata assada com alecrim?", isGood: false },
 
     { name: "Pizza", emoji: "🍕", description: "Saborosa e variada.", goodFeedback: "", moderateFeedback: "⚠️ Prefira massa integral e recheios naturais. Consuma com moderação.", isGood: false },
@@ -26,7 +27,11 @@ const healthyRecipes = [
     { name: "Panqueca de Banana", time: "10 min", ingredients: "Banana, ovos, canela, aveia", emoji: "🍌", link: "banana/banana.html" },
     { name: "Wrap de Frango Rápido", time: "10 min", ingredients: "Frango, tortilha, iogurte, alface, tomate", emoji: "🍗", link: "frango/frango.html" },
     { name: "Palitinhos de Cenoura", time: "5 min", ingredients: "Cenoura, iogurte, limão, azeite", emoji: "🥕", link: "cenoura/cenoura.html" },
-    { name: "Vitamina de Banana", time: "2 min", ingredients: "Banana, leite, aveia, mel", emoji: "🥤", link: "vitaminaBanana/vitamina.html" }
+    { name: "Vitamina de Banana", time: "2 min", ingredients: "Banana, leite, aveia, mel", emoji: "🥤", link: "vitaminaBanana/vitamina.html" },
+    { name: "Mini Pizza de Pão Integral", time: "8 min", ingredients: "Pão integral, molho, queijo, orégano", emoji: "🍕", link: "minipizza/minipizza.html" },
+    { name: "Iogurte com Frutas e Granola", time: "3 min", ingredients: "Iogurte natural, frutas, granola, mel", emoji: "🥣", link: "iogurte/iogurte.html" },
+    { name: "Batata na Airfryer", time: "40 min", ingredients: "Batata, azeite, páprica, orégano", emoji: "🥔", link: "batata/batata.html" },
+    { name: "Grão de Bico Crocante", time: "30 min", ingredients: "Grão de bico, azeite, páprica, orégano", emoji: "🫘", link: "grao/grao.html" }
 ];
 
 // Elementos DOM
