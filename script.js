@@ -14,7 +14,11 @@ const foods = [
 
     { name: "Pizza", emoji: "🍕", description: "Saborosa e variada.", goodFeedback: "", moderateFeedback: "⚠️ Prefira massa integral e recheios naturais. Consuma com moderação.", isGood: false },
     
-    { name: "Sorvete", emoji: "🍦", description: "Doce e refrescante.", goodFeedback: "", moderateFeedback: "⚠️ Rico em açúcar e gordura. Aproveite como um mimo ocasional.", isGood: false }
+    { name: "Sorvete", emoji: "🍦", description: "Doce e refrescante.", goodFeedback: "", moderateFeedback: "⚠️ Rico em açúcar e gordura. Aproveite como um mimo ocasional.", isGood: false },
+
+    { name: "Ovo", emoji: "🥚", description: "Nutritivo, versátil e proteico.", goodFeedback: "✅ Excelente fonte de proteína e gorduras boas! Rico em vitaminas D e B12. Ótimo no café da manhã.", moderateFeedback: "⚠️ Prefira cozido ou mexido. Evite fritar com excesso de óleo.", isGood: true },
+
+    { name: "Bolacha Recheada", emoji: "🍪", description: "Doce, crocante e irresistível.", goodFeedback: "", moderateFeedback: "⚠️ Muito açúcar, gordura trans e calorias vazias. Troque por uma fruta ou castanhas!", isGood: false },
 ];
 
 let currentFoodIndex = 0;
@@ -25,13 +29,13 @@ let userLevel = "Explorador Nutricional";
 
 const healthyRecipes = [
     { name: "Panqueca de Banana", time: "10 min", ingredients: "Banana, ovos, canela, aveia", emoji: "🍌", link: "banana/banana.html" },
-    { name: "Wrap de Frango Rápido", time: "10 min", ingredients: "Frango, tortilha, iogurte, alface, tomate", emoji: "🍗", link: "frango/frango.html" },
+    { name: "Wrap de Frango Rápido", time: "10 min", ingredients: "Frango, tortilha, iogurte, alface, tomate", emoji: "🍗", link: "wrap-frango/frango.html" },
     { name: "Palitinhos de Cenoura", time: "5 min", ingredients: "Cenoura, iogurte, limão, azeite", emoji: "🥕", link: "cenoura/cenoura.html" },
     { name: "Vitamina de Banana", time: "2 min", ingredients: "Banana, leite, aveia, mel", emoji: "🥤", link: "vitaminaBanana/vitamina.html" },
     { name: "Mini Pizza de Pão Integral", time: "8 min", ingredients: "Pão integral, molho, queijo, orégano", emoji: "🍕", link: "minipizza/minipizza.html" },
     { name: "Iogurte com Frutas e Granola", time: "3 min", ingredients: "Iogurte natural, frutas, granola, mel", emoji: "🥣", link: "iogurte/iogurte.html" },
     { name: "Batata na Airfryer", time: "40 min", ingredients: "Batata, azeite, páprica, orégano", emoji: "🥔", link: "batata/batata.html" },
-    { name: "Grão de Bico Crocante", time: "30 min", ingredients: "Grão de bico, azeite, páprica, orégano", emoji: "🫘", link: "grao/grao.html" }
+    { name: "Omelete Recheado", time: "10 min", ingredients: "Ovos, queijo, presunto, tomate", emoji: "🍳", link: "ovo/ovo.html"} 
 ];
 
 // Elementos DOM

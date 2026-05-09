@@ -253,7 +253,7 @@ body {
 
 /* Seção Choices */
 #choices-section h2, .section h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #2E7D32;
     margin-bottom: 0.5rem;
 }
@@ -261,6 +261,7 @@ body {
 .section-subtitle {
     color: #6b7c5e;
     margin-bottom: 2rem;
+    font-size: 1.2rem;
 }
 
 .food-card-container {
@@ -637,4 +638,63 @@ body {
     background-color: #4CAF50; /* Fica verde forte quando passa o mouse */
     color: white;              /* Texto fica branco */
     transform: scale(1.05);    /* Dá uma leve crescidinha */
+}
+
+/* MUDANÇA DOS TITULOS DOS SECTIONS */
+
+.choices-section h2 {
+    font-size: 50px;
+}
+
+.recipes-section p {
+    font-size: 1.2rem;
+}
+
+
+/* Card maior no desktop */
+@media (min-width: 769px) {
+    .food-card {
+        max-width: 650px;
+        padding: 3rem 4rem;
+    }
+
+    .food-image {
+        font-size: 9rem;
+    }
+
+    .food-card h3 {
+        font-size: 2.8rem;
+    }
+
+    #food-description {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Feedback card maior no desktop */
+@media (min-width: 769px) {
+
+    .feedback-card h4 {
+
+        font-size: 1.8rem;
+
+    }
+
+    .feedback-card p {
+
+        font-size: 1.1rem;
+
+        line-height: 1.6;
+
+    }
+
+    .btn-next {
+
+        font-size: 1rem;
+
+        padding: 0.8rem 2rem;
+
+    }
+
 }

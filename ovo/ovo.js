@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (btnShare) {
         btnShare.addEventListener('click', async function() {
             const recipeData = {
-                title: 'Grão de Bico Crocante 🫘',
-                text: 'Aprenda a fazer esse snack saudável e crocante no forno ou airfryer!',
+                title: 'Omelete Recheado 🍳',
+                text: 'Aprenda a fazer esse omelete recheado delicioso em 10 minutos!',
                 url: window.location.href
             };
             if (navigator.share) {
@@ -49,61 +49,53 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.ingredients-list li').forEach(item => {
         item.addEventListener('mouseenter', function() {
             this.style.transform = 'translateX(5px)';
-            this.style.backgroundColor = '#D7CCC8';
+            this.style.backgroundColor = '#FFF9C4';
         });
         item.addEventListener('mouseleave', function() {
             this.style.transform = 'translateX(0)';
-            this.style.backgroundColor = '#EFEBE9';
+            this.style.backgroundColor = '#FFFDE7';
         });
     });
     
     const steps = document.querySelectorAll('.steps-list li');
     steps.forEach(step => {
         step.addEventListener('click', function() {
-            steps.forEach(s => { s.style.backgroundColor = '#EFEBE9'; s.style.transform = 'scale(1)'; });
-            this.style.backgroundColor = '#D7CCC8';
+            steps.forEach(s => { s.style.backgroundColor = '#FFFDE7'; s.style.transform = 'scale(1)'; });
+            this.style.backgroundColor = '#FFF9C4';
             this.style.transform = 'scale(1.02)';
         });
     });
     
-    // Timer do forno/airfryer - clique duplo no passo 5
-    const ovenStep = document.querySelector('.steps-list li:nth-child(5)');
-    if (ovenStep) {
-        ovenStep.addEventListener('dblclick', function() {
-            let timeLeft = 25;
-            this.style.backgroundColor = '#D7CCC8';
-            this.innerHTML = `<strong>Assando...</strong> ⏱️ ${timeLeft} minutos restantes`;
+    // Efeito de dobrar o omelete - clique duplo no passo 6
+    const foldStep = document.querySelector('.steps-list li:nth-child(6)');
+    if (foldStep) {
+        foldStep.addEventListener('dblclick', function() {
+            this.innerHTML = '<strong>Dobrando...</strong> 🍳 Formando a meia-lua!';
+            this.style.backgroundColor = '#FFE082';
+            this.style.transform = 'scale(1.05)';
             
-            const timer = setInterval(() => {
-                timeLeft--;
-                if (timeLeft > 0) {
-                    this.innerHTML = `<strong>Assando...</strong> ⏱️ ${timeLeft} minutos restantes`;
-                } else {
-                    clearInterval(timer);
-                    this.innerHTML = `<strong>Pronto!</strong> 🎉 Grão de bico crocante!`;
-                    this.style.backgroundColor = '#C8E6C9';
-                    this.style.transform = 'scale(1.05)';
-                    
-                    setTimeout(() => {
-                        this.style.transform = 'scale(1)';
-                        this.innerHTML = '<strong>Asse:</strong> Coloque os grãos na airfryer ou em uma assadeira. Asse por 20-25 minutos.';
-                    }, 2000);
-                }
-            }, 1000);
+            setTimeout(() => {
+                this.innerHTML = '<strong>Pronto!</strong> 🎉 Omelete dobrado com sucesso!';
+                this.style.backgroundColor = '#C8E6C9';
+                
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    this.innerHTML = '<strong>Dobre:</strong> Com uma espátula, dobre a outra metade sobre o recheio.';
+                }, 1500);
+            }, 800);
         });
     }
     
-    // Som de crocância ao clicar no último passo
-    const lastStep = document.querySelector('.steps-list li:last-child');
-    if (lastStep) {
-        lastStep.addEventListener('click', function() {
-            this.innerHTML = '<strong>Croc!</strong> 🫘 Snack crocante e saudável!';
-            this.style.backgroundColor = '#BCAAA4';
-            
-            setTimeout(() => {
-                this.innerHTML = '<strong>Sirva:</strong> Deixe esfriar um pouco e aproveite como snack crocante!';
-                this.style.backgroundColor = '#EFEBE9';
-            }, 1500);
+    // Efeito de chiado na frigideira - hover no passo 2
+    const panStep = document.querySelector('.steps-list li:nth-child(2)');
+    if (panStep) {
+        panStep.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = '#FFE082';
+            this.style.transform = 'scale(1.03)';
+        });
+        panStep.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = '#FFFDE7';
+            this.style.transform = 'scale(1)';
         });
     }
 });
