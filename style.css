@@ -393,6 +393,11 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.level-icon {
+    align-self: center;  /* ← adicione isso */
+    line-height: 1;
+}
+
 .progress-container {
     background-color: #E0E0E0;
     border-radius: 20px;
@@ -591,6 +596,23 @@ body {
     .food-emoji {
         font-size: 2.5rem; 
         padding: 0.5rem;
+    }
+
+    /* AJIETANDO O ERRO DO FINAL DO "SOBRE PROJETO" */
+    .section {
+        padding: 3rem 0.8rem;
+    }
+
+    .about-content {
+        padding: 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .about-highlight {
+        gap: 1rem;
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 

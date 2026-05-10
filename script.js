@@ -203,10 +203,10 @@ function nextFood() {
 }
 
 function updateProfileUI() {
-    if (userScore >= 140) userLevel = "Mestre da Alimentação 🌟";
-    else if (userScore >= 80) userLevel = "Nutricionista em Formação 🥑";
-    else if (userScore >= 30) userLevel = "Explorador Nutricional 🌿";
-    else userLevel = "Aprendiz Curioso 🍎";
+    if (userScore >= 140) userLevel = "Mestre da Alimentação";
+    else if (userScore >= 80) userLevel = "Nutricionista em Formação";
+    else if (userScore >= 30) userLevel = "Explorador Nutricional";
+    else userLevel = "Aprendiz Curioso";
     
     levelNameSpan.textContent = userLevel;
     userScoreSpan.textContent = userScore;
@@ -229,7 +229,7 @@ function displayHealthyRecipes() {
         card.innerHTML = `
             <div class="recipe-img">${recipe.emoji}</div>
             <h4>${recipe.name}</h4>
-            <a href="${recipe.link}" target="_blank" class="btn-recipe" style="text-decoration:none;text-align:center;">Ver Receita</a>
+            <a href="${recipe.link}" class="btn-recipe" style="text-decoration:none;text-align:center;">Ver Receita</a>
         `;
         recipesGrid.appendChild(card);
     });
