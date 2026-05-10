@@ -4,16 +4,16 @@ const foods = [
 
     { name: "Frango", emoji: "🍗", description: "Proteico, versátil e saboroso.", goodFeedback: "✅ Ótima proteína magra! Fonte de vitaminas B e minerais. Prefira grelhado ou desfiado.", moderateFeedback: "⚠️ Evite frituras! Grelhado ou desfiado é sempre a melhor opção.", isGood: true },
 
+    { name: "Pizza", emoji: "🍕", description: "Saborosa e variada.", goodFeedback: "", moderateFeedback: "⚠️ Prefira massa integral e recheios naturais. Consuma com moderação.", isGood: false },
+
     { name: "Cenoura", emoji: "🥕", description: "Crocante, doce e nutritiva.", goodFeedback: "✅ Perfeita! Rica em vitamina A e fibras. Ótima para a visão e pele. Snack prático e saudável.", moderateFeedback: "⚠️ Pode consumir à vontade! Crua ou cozida, é sempre uma excelente escolha.", isGood: true },
+
+    { name: "Batata Frita", emoji: "🍟", description: "Crocante e salgada.", goodFeedback: "", moderateFeedback: "⚠️ Rica em gordura e sódio. Que tal batata assada com alecrim?", isGood: false },
 
     { name: "Vitamina de Banana", emoji: "🥤", description: "Cremosa, doce e energética.", goodFeedback: "✅ Bebida nutritiva! Combina carboidratos bons, fibras e proteínas. Ideal para café da manhã.", moderateFeedback: "⚠️ Substitua o açúcar por mel ou banana bem madura para adoçar naturalmente.", isGood: true },
 
     { name: "Refrigerante", emoji: "🥤", description: "Gaseificado, doce e gelado.", goodFeedback: "", moderateFeedback: "⚠️ Muito açúcar e aditivos químicos. Prefira água ou sucos naturais.", isGood: false },
 
-    { name: "Batata Frita", emoji: "🍟", description: "Crocante e salgada.", goodFeedback: "", moderateFeedback: "⚠️ Rica em gordura e sódio. Que tal batata assada com alecrim?", isGood: false },
-
-    { name: "Pizza", emoji: "🍕", description: "Saborosa e variada.", goodFeedback: "", moderateFeedback: "⚠️ Prefira massa integral e recheios naturais. Consuma com moderação.", isGood: false },
-    
     { name: "Sorvete", emoji: "🍦", description: "Doce e refrescante.", goodFeedback: "", moderateFeedback: "⚠️ Rico em açúcar e gordura. Aproveite como um mimo ocasional.", isGood: false },
 
     { name: "Ovo", emoji: "🥚", description: "Nutritivo, versátil e proteico.", goodFeedback: "✅ Excelente fonte de proteína e gorduras boas! Rico em vitaminas D e B12. Ótimo no café da manhã.", moderateFeedback: "⚠️ Prefira cozido ou mexido. Evite fritar com excesso de óleo.", isGood: true },
