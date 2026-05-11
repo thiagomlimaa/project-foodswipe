@@ -42,7 +42,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     font-weight: 700;
     color: #2E7D32;
 }
@@ -171,21 +171,41 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 2.8rem;
+    /* ANTIGO */
+    /* font-size: 2.8rem;
     color: #1e3a1e;
     margin-bottom: 1rem;
-    line-height: 1.2;
+    line-height: 1.2; */
+
+    /* NOVO */
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1e3a1e;
+    margin-bottom: 1rem;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
 }
 
 .highlight {
+
     color: #4CAF50;
-    border-bottom: 3px solid #A5D6A7;
+    border-bottom: none;
 }
 
 .hero-text p {
-    font-size: 1.1rem;
+    /* ANTIGO */
+    /* font-size: 1.1rem;
     color: #4a5c3e;
+    margin-bottom: 2rem; */
+
+    /* NOVO */
+
+    font-size: 1.2rem;
+    color: #6b7c5e;
     margin-bottom: 2rem;
+    line-height: 1.7;
+    max-width: 480px;
 }
 
 .hero-illustration {
