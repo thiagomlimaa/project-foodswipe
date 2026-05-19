@@ -592,7 +592,7 @@ body {
     }
     
     .main-header {
-        padding: 1rem 4rem;
+        padding: 1rem 1.5rem;
     }
     
     .main-content {
@@ -639,7 +639,7 @@ body {
     }
 
     .logo {
-        margin-left: -0.4rem; /* ← ajuste esse valor até alinhar */
+        margin-left: 0rem; /* ← ajuste esse valor até alinhar */
     }
 }
 
